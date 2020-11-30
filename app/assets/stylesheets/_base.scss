@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+
+  // @include respond(tab-land) {
+  //   font-size: 56.25%; // 1rem = 9px, 9/16 * 100
+  // }
+  // @include respond(tab-port) {
+  //   font-size: 50%; //1rem = 8px, 8/16 * 100 = 50%
+  // }
+  // @include respond(big-desktop) {
+  //   font-size: 75%; //1rem = 12px, 12/16 * 100
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+::selection {
+  background-color: $primary;
+  color: white;
+}

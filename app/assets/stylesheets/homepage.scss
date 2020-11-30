@@ -1,0 +1,31 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'variables';
+
+.header {
+  &__layout {
+    background-image: url(./bar.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    color: $text-light;
+    font-weight: 600;
+  }
+
+  &__sub-title {
+    text-align: center;
+    color: $text-light;
+    font-weight: 500;
+  }
+}
