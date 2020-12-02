@@ -5,3 +5,22 @@
   </div>
 </header>
 
+<main>
+  <div class="posts__layout">
+    <div class="posts__container">
+      <h2 class=posts__title>Last Articles</h2>
+
+      <% @posts.each do |post|%>
+        <div class="post__item">
+          <h3><%= post.title %></h3>
+          <a href=<%= post.official_url %>><%= post.official_url %></a> VS <a href=<%= post.opposite_url%>><%= post.opposite_url %></a>
+          <div class="photo__container">
+            <img src=<%= post.official_photo %> alt=<%= post.official_photo %>>
+            <img src=<%= post.opposite_photo %> alt=<%= post.opposite_photo %>>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+

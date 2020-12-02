@@ -1,9 +1,11 @@
 class CreatePosts < ActiveRecord::Migration[6.0]
   def change
     create_table :posts do |t|
-      t.string :title
-      t.string :url
-      t.string :photo
+      t.string :title, null:false
+      t.string :official_url, null:false
+      t.string :opposite_url, null:false
+      t.string :official_photo, null:false
+      t.string :opposite_photo, null:false
 
       t.timestamps
     end

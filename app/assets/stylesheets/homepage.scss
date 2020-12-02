@@ -29,3 +29,39 @@
     font-weight: 400;
   }
 }
+
+.posts {
+  &__layout {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    // border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid black;
+  }
+}
+
+.post {
+  &__item {
+    // border: 5px solid red;
+  }
+}
+
+.photo__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    max-width: 50rem;
+    max-height: 30rem;
+  }
+}
