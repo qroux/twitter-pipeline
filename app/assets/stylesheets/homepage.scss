@@ -5,7 +5,7 @@
 
 .header {
   &__layout {
-    background-image: url(./bar.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), black), url(./bar.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,6 +26,6 @@
   &__sub-title {
     text-align: center;
     color: $text-light;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
