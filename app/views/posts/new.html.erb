@@ -1,0 +1,31 @@
+<%= form_for @post, html: { class: "form--create" }  do |f|%>
+  <div class="form__field">
+    <%= f.label :title, class: "form__label" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form__field">
+    <%= f.label :official_url, class: "form__label" %>
+    <%= f.text_field :official_url %>
+  </div>
+
+
+  <div class="form__field">
+    <%= f.label :official_photo, class: "form__label" %>
+    <%= f.text_field :official_photo %>
+  </div>
+
+
+  <div class="form__field">
+    <%= f.label :opposite_url, class: "form__label" %>
+    <%= f.text_field :opposite_url %>
+  </div>
+
+
+  <div class="form__field">
+    <%= f.label :opposite_photo, class: "form__label" %>
+    <%= f.text_field :opposite_photo %>
+  </div>
+
+  <%= f.submit :Submit, class: "btn btn--submit" %>
+<% end %>

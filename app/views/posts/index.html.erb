@@ -8,7 +8,12 @@
 <main>
   <div class="posts__layout">
     <div class="posts__container">
-      <h2 class=posts__title>Last Articles</h2>
+      <div class="posts__header">
+        <h2 class=posts__title>Last Articles</h2>
+        <%= link_to new_post_path, method: :get do %>
+          <div class="btn btn--create"> + </div>
+        <% end %>
+      </div>
 
       <% @posts.each do |post|%>
         <div class="post__item">
