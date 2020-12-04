@@ -1,6 +1,4 @@
-require 'selenium-webdriver'
-require 'open-uri'
-require 'nokogiri'
+
 
 class PostsController < ApplicationController
   def index
@@ -15,24 +13,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     url = post_params[:official_url]
-    driver = Selenium::WebDriver.for :chrome
-    driver.get url
-
-    p driver.page_source
-
-    raise
-    html_doc = Nokogiri::HTML(driver.page_source)
-
-    element = wait.until { driver.find_element(:class => "gb_P") }
-    element.click
-    
-
+    @thumb = LinkThumbnailer.generate(url)
 
     raise
 
-    html_doc.search('.css-9pa8cd').each do |element|
-      @post.official_url = element.attribute('src').value
-    end
 
     if @post.save
       redirect_to root_path
