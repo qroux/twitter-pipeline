@@ -1,5 +1,4 @@
 
-
 class PostsController < ApplicationController
   def index
     @posts = Post.all
@@ -10,13 +9,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-
-    url = post_params[:official_url]
-    @thumb = LinkThumbnailer.generate(url)
-
+    @post = Post.new(post_params)   
+    official_url = TweetFetcher.search_image(post_params[:official_url])
+    
     raise
 
+    @post.official_url = official_url
 
     if @post.save
       redirect_to root_path
